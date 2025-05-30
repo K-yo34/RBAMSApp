@@ -26,7 +26,6 @@ This project uses the following Java classes:
 - `InsufficientBalanceException.java`  
   → A custom exception that is thrown when withdrawal exceeds the allowed balance or overdraft.
 
----
 
 ## ▶️ How to Run This Project
 
@@ -36,3 +35,11 @@ This project uses the following Java classes:
 4. Compile all the files:
    ```bash
    javac *.java
+
+Screenshots
+
+---![Screenshot 2025-05-30 163215](https://github.com/user-attachments/assets/047aa25e-ae44-4719-b503-50ebc46aab3e)
+![Screenshot 2025-05-30 163144](https://github.com/user-attachments/assets/67683691-d26e-4c59-afd6-8881dec09af5)
+![Screenshot 2025-05-30 163124](https://github.com/user-attachments/assets/b6bdefae-28c8-4cb2-bd98-93448d6ff91c)
+![Screenshot 2025-05-30 163116](https://github.com/user-attachments/assets/d8a36f77-a521-421e-baeb-fa632c25a2b2)
+
