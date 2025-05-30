@@ -1,38 +1,54 @@
 # 💰 Rural Bank Account Management System (RBAMS)
 
-This is a simple **Java console-based application** that simulates a basic banking system for the **Rural Bank of Nepal**. It allows users to perform basic banking operations like deposit, withdraw, and interest calculation.
+This is a beginner-friendly Java console application that simulates a basic banking system for the **Rural Bank of Nepal**. It allows a customer to manage both **Savings** and **Current** accounts.
 
 ---
 
-## 📦 What This Project Includes
+## 📌 What You Can Do
 
-This project uses the following Java classes:
+- Create a customer with Savings and Current accounts.
+- Deposit money into either account.
+- Withdraw money (with overdraft for Current accounts).
+- Add interest to the Savings account.
+- View account details.
+- Handle errors when withdrawing too much money.
 
-- `RBAMSApp.java`  
-  → The main application. It interacts with the user and performs banking operations.
+---
 
-- `BankAccount.java`  
-  → An abstract class that contains common properties and methods for all accounts.
+## 🧱 Class Design & OOP Concepts
 
-- `SavingsAccount.java`  
-  → Inherits from `BankAccount`. It allows adding interest to the balance.
+This project is built using core **Object-Oriented Programming (OOP)** concepts:
 
-- `CurrentAccount.java`  
-  → Inherits from `BankAccount`. Allows overdraft withdrawals up to Rs. 5000.
+### 🔹 Classes and Objects
+- Each part of the system is modeled using classes (`Customer`, `BankAccount`, etc.).
+- You create objects like `Customer`, `SavingsAccount`, and `CurrentAccount` in your main program.
 
-- `Customer.java`  
-  → Stores customer name and their multiple bank accounts.
+### 🔹 Inheritance
+- `SavingsAccount` and `CurrentAccount` **inherit** from the abstract class `BankAccount`.
+- They reuse common features like account holder info and balance, but also define their own behavior.
 
-- `InsufficientBalanceException.java`  
-  → A custom exception that is thrown when withdrawal exceeds the allowed balance or overdraft.
+### 🔹 Abstraction
+- `BankAccount` is an **abstract class**. It hides common functionality and forces child classes to implement `deposit()` and `withdraw()` methods.
 
+### 🔹 Polymorphism
+- The program uses polymorphism when dealing with account types.
+- You can treat `SavingsAccount` and `CurrentAccount` as `BankAccount` when adding them to the customer.
 
-## ▶️ How to Run This Project
+### 🔹 Encapsulation
+- Data like account balance and customer name are kept **private** or **protected** and accessed through methods.
 
-1. Make sure you have **Java (JDK)** installed.
-2. **Clone** this repository or download the `.java` files.
-3. Open a terminal in the project directory.
-4. Compile all the files:
+### 🔹 Exception Handling
+- The program includes a custom exception class called `InsufficientBalanceException`.
+- This helps handle errors when a withdrawal exceeds the allowed limit.
+
+---
+
+## ▶️ How to Run
+
+1. Make sure you have Java installed (JDK 8 or higher).
+2. Save all `.java` files in the same folder.
+3. Open terminal or command prompt.
+4. Compile the files:
    ```bash
    javac *.java
 
